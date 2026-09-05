@@ -36,6 +36,7 @@ while(i<n)
         {
             arr[j]=arr[j-1];
         }
+        arr[idx]=0;
         i=i+2;
     }
     else
