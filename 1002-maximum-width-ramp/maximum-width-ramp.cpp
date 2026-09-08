@@ -142,7 +142,7 @@ int j=0;
 while(j<len)
 {
     
-        while(i<j && nums[i]>aux[j])
+        while(nums[i]>aux[j])
         {
             i++;
         }
