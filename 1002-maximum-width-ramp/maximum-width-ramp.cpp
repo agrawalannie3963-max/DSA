@@ -142,17 +142,19 @@ int j=0;
 while(j<len)
 {
     
-        while(nums[i]>aux[j])
+        if(nums[i]>aux[j])
         {
             i++;
         }
-        
+        else
+        {
             int maxramp=j-i;
             if(maxramp>max)
             {
                 max=maxramp;
             }
             j++;
+        }
         
 }
 return max;
