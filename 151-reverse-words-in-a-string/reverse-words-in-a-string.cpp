@@ -84,7 +84,7 @@ while(i<len1)
     }
 }
 int len2=s.size();
-    for(int k=0;k<len2;k++)
+    for(int k=0;k<len2-1;k++)
     {
         if(s[k]==' ' && s[k+1]==' ')
         {
