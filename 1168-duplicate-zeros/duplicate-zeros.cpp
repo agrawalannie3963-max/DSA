@@ -54,38 +54,62 @@ public:
 //     }
 // };
 
+// int n=arr.size();
+// int zeroCount=0;
+// for(int i=0;i<n;i++)
+// {
+//     if(arr[i]==0)
+//     {
+//         zeroCount++;
+//     }
+// }
+// int tp=n-1;
+// int fp;
+// while(tp>=0 && zeroCount!=0)
+// {
+//     if(arr[tp]==0)
+//     {
+//         zeroCount--;
+//     }
+//         fp=tp+zeroCount;
+//     if(fp<n)
+//     {
+//         arr[fp]=arr[tp];
+//     }
+//     if(arr[tp]==0)
+//     {
+//         if((fp+1)<n)
+//         {
+//             arr[fp+1]=0;
+//         }
+        
+//     }
+//     tp--;
+// }
+// }
+// };
 int n=arr.size();
-int zeroCount=0;
-for(int i=0;i<n;i++)
+vector<int>aux;
+int i=0;
+while(i<n)
 {
     if(arr[i]==0)
     {
-        zeroCount++;
+        aux.push_back(0);
+        aux.push_back(0);
+        i++;
+    }
+    else
+    {
+        aux.push_back(arr[i]);
+        i++;
     }
 }
-int tp=n-1;
-int fp;
-while(tp>=0 && zeroCount!=0)
+for(int i=0;i<n;i++)
 {
-    if(arr[tp]==0)
-    {
-        zeroCount--;
-    }
-        fp=tp+zeroCount;
-    if(fp<n)
-    {
-        arr[fp]=arr[tp];
-    }
-    if(arr[tp]==0)
-    {
-        if((fp+1)<n)
-        {
-            arr[fp+1]=0;
-        }
-        
-    }
-    tp--;
+    arr[i]=aux[i];
 }
-}
-};
 
+
+    }
+};
