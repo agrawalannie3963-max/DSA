@@ -35,6 +35,7 @@ public:
 //     }
 // };
 int len=s.size();
+string aux;
 int m=0;
 int n=len-1;
 while(n>=0 && s[n]==' ')
@@ -45,24 +46,24 @@ while(m<len && s[m]==' ')
 {
     m++;
 }
-s=s.substr(m,n-m+1);
+aux=s.substr(m,n-m+1);
 m=0;
-n=s.size()-1;
+n=aux.size()-1;
 while(m<n)
 {
-int temp=s[m];
-s[m]=s[n];
-s[n]=temp;
+int temp=aux[m];
+aux[m]=aux[n];
+aux[n]=temp;
 m++;
 n--;
 }
-int len1=s.size();
+int len1=aux.size();
 int i=0;
 int l=0;
 int r=0;
 while(i<len1)
 {
-    while(i<len1 && s[i]!=' ')
+    while(i<len1 && aux[i]!=' ')
     {
         r=i;
         i++;
@@ -71,28 +72,28 @@ while(i<len1)
     int l_copy=l;
     while(l_copy<r_copy)
     {
-          int temp1=s[l_copy];
-          s[l_copy]=s[r_copy];
-          s[r_copy]=temp1;
+          int temp1=aux[l_copy];
+          aux[l_copy]=aux[r_copy];
+          aux[r_copy]=temp1;
           l_copy++;
           r_copy--;
     }
-    while(i<len1 && s[i]==' ')
+    while(i<len1 && aux[i]==' ')
     {
          l=i+1;
          i++;
     }
 }
-int len2=s.size();
-    for(int k=0;k<len2;k++)
+int len2=aux.size();
+    for(int k=0;k<len2-1;k++)
     {
-        if(s[k]==' ' && s[k+1]==' ')
+        if(aux[k]==' ' && aux[k+1]==' ')
         {
-            s.erase(k,1);
+            aux.erase(k,1);
             k--;
         }
     }
-    return s;
+    return aux;
 
 }
 };
