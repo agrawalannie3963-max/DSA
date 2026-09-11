@@ -85,15 +85,15 @@ while(i<len1)
     }
 }
 int len2=aux.size();
-    for(int k=0;k<len2-1;k++)
+string ans;
+    for(int k=0;k<len2;k++)
     {
-        if(aux[k]==' ' && aux[k+1]==' ')
+        if((aux[k]!=' ')||(k>0 && aux[k-1]!=' '))
         {
-            aux.erase(k,1);
-            k--;
+            ans=ans+aux[k];
         }
     }
-    return aux;
+    return ans;
 
 }
 };
