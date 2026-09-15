@@ -37,7 +37,6 @@ public:
 
 
 
-
 sort(arr.begin(),arr.end());
 int i;
 int n=arr.size();
