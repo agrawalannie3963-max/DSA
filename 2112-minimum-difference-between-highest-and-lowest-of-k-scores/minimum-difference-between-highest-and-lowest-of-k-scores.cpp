@@ -1,28 +1,28 @@
 class Solution {
 public:
     int minimumDifference(vector<int>& nums, int k) {
-        int len=nums.size();
-        sort(nums.begin(),nums.end());
-        int diff=0;
-        int i=0;
-        // for(int i=0;i<k;i++)
+        // int len=nums.size();
+        // sort(nums.begin(),nums.end());
+        // int diff=0;
+        // int i=0;
+        // // for(int i=0;i<k;i++)
         
-            diff=nums[k-1]-nums[i];
+        //     diff=nums[k-1]-nums[i];
 
-        int diff1=0;
-        for(int j=1;j<=len-k;j++)
-        {
-            int w_start=j;
-            int w_end=(j+k)-1;
-            int diff1=nums[w_end]-nums[w_start];
-        if(diff1<=diff)
-        {
-           diff=diff1;
-        }
-        }
-        return diff;
-        }
-        };
+        // int diff1=0;
+        // for(int j=1;j<=len-k;j++)
+        // {
+        //     int w_start=j;
+        //     int w_end=(j+k)-1;
+        //     int diff1=nums[w_end]-nums[w_start];
+        // if(diff1<=diff)
+        // {
+        //    diff=diff1;
+        // }
+        // }
+        // return diff;
+        // }
+        // };
         // int len=nums.size();
         // int i=0;
         // int j=i+1;
@@ -82,6 +82,27 @@ public:
 // return diff;
 // }
 // };
+sort(nums.begin(),nums.end());
+int n=nums.size();
+int diff=0;
+for(int i=0;i<k;i++)
+{
+    diff=nums[k-1]-nums[0];
+}
+for(int j=1;j<=n-k;j++)
+{
+    int w_start=j;
+    int w_end=(j+k)-1;
+   int diff1=nums[w_end]-nums[w_start];
+  if(diff1<=diff)
+  {
+     diff=diff1;
+  }
+}
+return diff;
+    }
+};
+
 
 
 
