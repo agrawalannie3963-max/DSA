@@ -56,7 +56,7 @@ int n=nums.size();
 int max=0;
 sort(nums.begin(),nums.end());
 int i=0;
-int j=0;
+int j=i+1;
 int count=0;
 int k=n-1;
 int m=0;
