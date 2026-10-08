@@ -85,10 +85,8 @@ public:
 sort(nums.begin(),nums.end());
 int n=nums.size();
 int diff=0;
-for(int i=0;i<k;i++)
-{
+
     diff=nums[k-1]-nums[0];
-}
 for(int j=1;j<=n-k;j++)
 {
     int w_start=j;
