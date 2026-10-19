@@ -20,18 +20,18 @@ public:
             i++;
             count++;
         }
-        if(count==time)
-        {
-            return i;
-        }
+        // if(count==time)
+        // {
+        //     return i;
+        // }
         if(i==n)
         {
         while((count<time)&&(i!=1))
         {
-            if(count>=time)
-            {
-                return i;
-            }
+            // if(count>=time)
+            // {
+            //     return i;
+            // }
          i--;
          count++;
         }
@@ -41,10 +41,10 @@ public:
         {
             while(count<time)
             {
-                if(count>=time)
-                {
-                    return i;
-                }
+                // if(count>=time)
+                // {
+                //     return i;
+                // }
             i++;
             count++;
             }
