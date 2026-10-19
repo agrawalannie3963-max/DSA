@@ -123,74 +123,113 @@ public:
 
 
 
+// int n=answerKey.size();
+// int i=0;
+// int j=i;
+// int max1=0;
+// int count=0;
+// int len=0;
+// while(j<n)
+// {
+//     if(answerKey[j]=='F')
+//     {
+//         j++;
+//     }
+//     else
+//     {
+//         count++;
+//         while(count>k)
+//         {
+//            if(answerKey[i]=='T')
+//            {
+//                count--;
+//            }
+//            i++;
+//         }
+//         j++;
+//     }
+//      len=j-i;
+//      if(len>max1)
+//     {
+//         max1=len;
+//     }
+     
+
+// }
+// int l=0;
+// int m=l;
+// int max2=0;
+// int count1=0;
+// int len1=0;
+// while(m<n)
+// {
+//     if(answerKey[m]=='T')
+//     {
+//        m++;
+//     }
+//     else
+//     {
+//         count1++;
+//         while(count1>k)
+//         {
+//             if(answerKey[l]=='F')
+//             {
+//                 count1--;
+//             }
+//             l++;
+//         }
+//     m++;
+//     }
+//     len1=m-l;
+//     if(len1>max2)
+//     {
+//       max2=len1;
+//     }
+// }
+// int c=max(max1,max2);
+// return c;
+// }
+// };
+
 int n=answerKey.size();
 int i=0;
 int j=i;
-int max1=0;
-int count=0;
-int len=0;
+int countT=0;
+int countF=0;
+int max=0;
 while(j<n)
 {
-    if(answerKey[j]=='F')
+    if(answerKey[j]=='T')
     {
-        j++;
+        countT++;
     }
     else
     {
-        count++;
-        while(count>k)
+        countF++;
+    }
+        int c=min(countT,countF);
+        while(min(countT,countF)>k)
         {
-           if(answerKey[i]=='T')
-           {
-               count--;
-           }
-           i++;
+             if(answerKey[i]=='T')
+             {
+                countT--;
+             }
+             else
+             {
+                countF--;
+             }
+          i++;
         }
         j++;
-    }
-     len=j-i;
-     if(len>max1)
-    {
-        max1=len;
-    }
-     
-
-}
-int l=0;
-int m=l;
-int max2=0;
-int count1=0;
-int len1=0;
-while(m<n)
-{
-    if(answerKey[m]=='T')
-    {
-       m++;
-    }
-    else
-    {
-        count1++;
-        while(count1>k)
+        int len=j-i;
+        if(len>max)
         {
-            if(answerKey[l]=='F')
-            {
-                count1--;
-            }
-            l++;
+            max=len;
         }
-    m++;
-    }
-    len1=m-l;
-    if(len1>max2)
-    {
-      max2=len1;
-    }
 }
-int c=max(max1,max2);
-return c;
+return max;
 }
 };
-
 
 
 
