@@ -8,9 +8,9 @@ public:
         while(i<n-1)
         {
             int j=i+1;
-            if(nums[i]!=nums[j])
+            if(nums[i]!=nums[i+1])
             {
-                nums[k]=nums[j];
+                nums[k]=nums[i+1];
                 i++;
                 k++;
             }
