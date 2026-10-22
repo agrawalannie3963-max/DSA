@@ -76,7 +76,7 @@ if(k==0 || k==1)
 while(j<n)
 {
     pro=pro*nums[j];
-    if((int )pro<k)
+    if(pro<k)
     {
         count=count+(j-i)+1;
 
