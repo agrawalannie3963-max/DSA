@@ -67,7 +67,7 @@ public:
 int n=nums.size();
 long long int i=0;
 long long int j=i;
-double pro=1;
+long long int  pro=1;
 long long int count=0;
 if(k==0 || k==1)
 {
@@ -76,16 +76,16 @@ if(k==0 || k==1)
 while(j<n)
 {
     pro=pro*nums[j];
-    if((double)pro<k)
+    if((long long int )pro<k)
     {
         count=count+(j-i)+1;
 
     }
     else
     { 
-        while((double)pro>=k)
+        while((long long int )pro>=k)
         {
-            pro=(double)(pro/nums[i]);
+            pro=(long long int )(pro/nums[i]);
             i++;
         }
         count=count+(j-i)+1;
