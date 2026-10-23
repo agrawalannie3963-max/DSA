@@ -25,7 +25,7 @@ public:
                 }
                 j++;
             }
-            int len=j-i;
+            int len=(j-i);
             if(len>max)
             {
                 max=len;
