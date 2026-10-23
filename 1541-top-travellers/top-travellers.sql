@@ -4,5 +4,5 @@ FROM users u
 LEFT JOIN
 rides r
 ON u.id=r.user_id
-GROUP BY u.id,u.name
+GROUP BY r.user_id
 ORDER BY travelled_distance DESC,u.name ASC;
