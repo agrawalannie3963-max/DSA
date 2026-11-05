@@ -44,29 +44,54 @@ public:
 // return count;
 //     }
 // };
-int n=s.size();
-int i=0;
+// bruteforce
+// int n=s.size();
+// int i=0;
+// int count=0;
+// int max_len=0;
+// for(int i=0;i<n;i++)
+// {
+//     vector<int>aux(128,0);
+//     count =0;
+//     int flag=1;
+//     for(int j=i;j<n && flag==1;j++)
+//     {
+//         if(aux[s[j]]==1)
+//         {
+//            flag=0;
+//         }
+//         else
+//         {
+//             aux[s[j]]=1;
+//             count++;
+//             max_len=max(max_len,count);
+//         }
+//     }
+// }
+//     return max_len;
+// }
+//     };
+long long int i=0;
+long long int j=i;
 int count=0;
-int max_len=0;
-for(int i=0;i<n;i++)
+int max=0;
+int n=s.size();
+vector<int>aux(128,0);
+while(j<n)
 {
-    vector<int>aux(128,0);
-    count =0;
-    int flag=1;
-    for(int j=i;j<n && flag==1;j++)
+    aux[s[j]]++;
+    while(aux[s[j]]>1)
+        {
+            aux[s[i]]--;
+            i++;
+        }
+    int len=j-i+1;
+    if(len>max)
     {
-        if(aux[s[j]]==1)
-        {
-           flag=0;
-        }
-        else
-        {
-            aux[s[j]]=1;
-            count++;
-            max_len=max(max_len,count);
-        }
+        max=len;
     }
+    j++;
 }
-    return max_len;
-}
-    };
+return max;
+    }
+};
